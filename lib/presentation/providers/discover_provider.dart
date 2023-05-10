@@ -16,9 +16,7 @@ class DiscoverProvider extends ChangeNotifier {
         .map((video) => LocalVideoModel.fromJson(video).toVideoPostEntity())
         .toList();
     videos.addAll(newVideos);
-    
     initialLoading = false;
-
     notifyListeners();
   }
 }
