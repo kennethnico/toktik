@@ -12,7 +12,7 @@ class VideoButton extends StatelessWidget {
         _CustomIconButton(
             value: video.likes, iconData: Icons.favorite, iconColor: Colors.red),
         _CustomIconButton(
-            value: video.views, iconData: Icons.reviews, iconColor: Colors.blue),
+            value: video.views, iconData: Icons.remove_red_eye, iconColor: Colors.white),
       ],
     );
   }
@@ -32,7 +32,7 @@ class _CustomIconButton extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {}, 
-          icon: Icon(iconData, color: color,)
+          icon: Icon(iconData, color: color, size: 30,)
         ),
         Text('$value'),
       ],
