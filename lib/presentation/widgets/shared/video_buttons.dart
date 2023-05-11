@@ -10,9 +10,9 @@ class VideoButton extends StatelessWidget {
     return Column(
       children: [
         _CustomIconButton(
-            value: video.likes, iconData: Icons.favorite, color: Colors.red),
+            value: video.likes, iconData: Icons.favorite, iconColor: Colors.red),
         _CustomIconButton(
-            value: video.views, iconData: Icons.reviews, color: Colors.blue),
+            value: video.views, iconData: Icons.reviews, iconColor: Colors.blue),
       ],
     );
   }
