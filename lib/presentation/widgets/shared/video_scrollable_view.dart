@@ -9,21 +9,22 @@ class VideoScrollableView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView.builder(
+    return PageView.builder( //Builder construye bajo demanda.
         scrollDirection: Axis.vertical,
         physics: const BouncingScrollPhysics(),
-        itemCount: videos.length,
+        itemCount: videos.length, //¿Cuántos elementos tengo? Siempre recibo un listado de videos
         itemBuilder: (context, index) {
           final VideoPost videoPost = videos[index];
 
           return Stack(
             children: [
-              //Videoplayer + gradiente
+              //Videoplayer
+              //Gradiente
               //Botones
-              Positioned(
+              Positioned( //Widget que trabaja junto a Stack para posicionar elementos/widgets
                 bottom: 20,
                 right: 5,
-                child: VideoButton(video: videoPost)
+                child: VideoButtons(video: videoPost)
                 )
             ],
           );
